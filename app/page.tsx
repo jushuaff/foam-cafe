@@ -369,10 +369,10 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                      <a href={branch.directionsUrl} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
+                      <button type="button" onClick={() => focusBranchMap(branch.id)} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
                         Get Directions
                         <ArrowRight size={15} aria-hidden="true" />
-                      </a>
+                      </button>
                       <a href={`tel:${branch.tel.replace(/\s+/g, "")}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-[#201d1b]/10 bg-white/80 px-5 py-3 text-sm font-medium text-[#201d1b]">
                         Call
                       </a>
@@ -384,6 +384,7 @@ export default function HomePage() {
               <div ref={mapPanelRef} className="scroll-mt-28 overflow-hidden rounded-[2rem] border border-[#d9c9b3] bg-[#efe6dc] p-3 shadow-[0_20px_60px_rgba(39,29,24,0.04)]">
                 <div className="relative aspect-[4/3] min-h-[360px] overflow-hidden rounded-[1.6rem] border border-[#c0b2a4] bg-white/60 lg:aspect-[5/6]">
                   <iframe
+                    key={activeBranch.id}
                     title={`${activeBranch.name} map`}
                     src={activeBranch.mapUrl}
                     className="absolute inset-0 h-full w-full border-0"
