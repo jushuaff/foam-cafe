@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { navigationItems } from "@/data/foam";
 
 export function SiteHeader() {
@@ -24,16 +24,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        <Link href="#top" className="flex items-center gap-3" aria-label="Foam Coffee home">
-          <Image
-            src="/images/foam-logo.svg"
-            alt="Foam Coffee"
-            width={156}
-            height={45}
-            priority
-            className="h-auto w-[156px] rounded-md bg-white/80"
-          />
-        </Link>
+        <BrandLogo />
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {navigationItems.map((item) => (

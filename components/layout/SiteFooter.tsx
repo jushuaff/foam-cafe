@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Camera, Globe, Mail, Phone } from "lucide-react";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { businessInfo, navigationItems, branches, socialLinks } from "@/data/foam";
 
 export function SiteFooter() {
@@ -13,13 +13,7 @@ export function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1.25fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Image
-                src="/images/foam-logo.svg"
-                alt="Foam Coffee"
-                width={190}
-                height={55}
-                className="h-auto w-[190px] rounded-md bg-white p-1"
-              />
+              <BrandLogo inverted />
             </div>
             <p className="mt-6 max-w-sm text-base leading-7 text-[#dfd6ce]">
               {businessInfo.summary}

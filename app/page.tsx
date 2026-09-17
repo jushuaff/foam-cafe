@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   ArrowRight,
   Calendar,
@@ -33,8 +33,14 @@ import {
 
 export default function HomePage() {
   const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
-  const [activeBranchId, setActiveBranchId] = useState(branches[0].id);
+  const [activeBranchId, setActiveBranchId] = useState(branches[1].id);
   const activeBranch = branches.find((branch) => branch.id === activeBranchId) ?? branches[0];
+  const mapPanelRef = useRef<HTMLDivElement>(null);
+
+  const focusBranchMap = (branchId: string) => {
+    setActiveBranchId(branchId);
+    window.requestAnimationFrame(() => mapPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }));
+  };
 
   return (
     <div id="top" className="bg-[#f7f1ea] text-[#1e1a17]">
@@ -326,7 +332,7 @@ export default function HomePage() {
                       : "border-[#201d1b]/10 bg-white/70 text-[#201d1b] hover:bg-[#201d1b] hover:text-[#f5efe8]"
                   }`}
                   aria-pressed={activeBranchId === branch.id}
-                  onClick={() => setActiveBranchId(branch.id)}
+                  onClick={() => focusBranchMap(branch.id)}
                 >
                   {branch.label}
                 </button>
@@ -363,10 +369,10 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                      <a href={branch.directionsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
+                      <button type="button" onClick={() => focusBranchMap(branch.id)} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
                         Get Directions
                         <ArrowRight size={15} aria-hidden="true" />
-                      </a>
+                      </button>
                       <a href={`tel:${branch.tel.replace(/\s+/g, "")}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-[#201d1b]/10 bg-white/80 px-5 py-3 text-sm font-medium text-[#201d1b]">
                         Call
                       </a>
@@ -375,7 +381,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="overflow-hidden rounded-[2rem] border border-[#d9c9b3] bg-[#efe6dc] p-3 shadow-[0_20px_60px_rgba(39,29,24,0.04)]">
+              <div ref={mapPanelRef} className="scroll-mt-28 overflow-hidden rounded-[2rem] border border-[#d9c9b3] bg-[#efe6dc] p-3 shadow-[0_20px_60px_rgba(39,29,24,0.04)]">
                 <div className="relative aspect-[4/3] min-h-[360px] overflow-hidden rounded-[1.6rem] border border-[#c0b2a4] bg-white/60 lg:aspect-[5/6]">
                   <iframe
                     title={`${activeBranch.name} map`}
