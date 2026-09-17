@@ -8,7 +8,7 @@ export function SiteFooter() {
   const isDemo = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 
   return (
-    <footer className="mt-20 border-t border-[#d7cec4] bg-[#171310] text-[#f6efe9]">
+    <footer className="border-t border-[#d7cec4] bg-[#171310] text-[#f6efe9]">
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1.25fr]">
           <div>
