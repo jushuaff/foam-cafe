@@ -83,17 +83,17 @@ Example:
 CONTACT_TO_EMAIL=hello@yourdomain.com
 ```
 
-## How to replace sample photos
+## How to replace concept photos
 
-The project includes stylized placeholder image slots under `public/images/` and `public/images/social/`.
+The current JPGs under `public/images/places/` are sourced editorial cafe photographs used to keep this concept site visually complete. They are not confirmed Foam Coffee location or product photographs.
 
 To replace them:
 
-1. Add the real files in the same folders.
+1. Add Foam Coffee-owned or client-approved files in the same folders.
 2. Keep the same image filenames or update the references in `data/foam.ts`.
 3. Use the same aspect ratios so the layout remains stable.
 
-The project includes a fallback treatment so missing images do not break the layout.
+The official Facebook page is linked in the site, but its profile assets were not publicly exposed without login in this environment, so no unverified logo file was copied.
 
 ## How to update branches
 

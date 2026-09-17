@@ -107,26 +107,26 @@ export const experiences = [
 ];
 
 export const socialGallery = [
-  { id: "foam-01", alt: "Foam Coffee social showcase 1", src: "/images/social/foam-01.svg" },
-  { id: "foam-02", alt: "Foam Coffee social showcase 2", src: "/images/social/foam-02.svg" },
-  { id: "foam-03", alt: "Foam Coffee social showcase 3", src: "/images/social/foam-03.svg" },
-  { id: "foam-04", alt: "Foam Coffee social showcase 4", src: "/images/social/foam-04.svg" },
-  { id: "foam-05", alt: "Foam Coffee social showcase 5", src: "/images/social/foam-05.svg" },
-  { id: "foam-06", alt: "Foam Coffee social showcase 6", src: "/images/social/foam-06.svg" },
+  { id: "foam-01", alt: "Coffee in a warm cafe setting", src: "/images/places/coffee-closeup.jpg" },
+  { id: "foam-02", alt: "Cafe interior with tables and natural light", src: "/images/places/travelite-interior.jpg" },
+  { id: "foam-03", alt: "Fresh pastry selection", src: "/images/places/pastries.jpg" },
+  { id: "foam-04", alt: "Coffee shop exterior atmosphere", src: "/images/places/travelite-exterior.jpg" },
+  { id: "foam-05", alt: "Prepared cafe food", src: "/images/places/food.jpg" },
+  { id: "foam-06", alt: "Coffee and cafe atmosphere", src: "/images/places/roastery.jpg" },
 ];
 
 export const imageSlots = {
-  hero: "/images/places/hero.svg",
-  signature: "/images/places/signature.svg",
-  traveliteExterior: "/images/places/travelite-exterior.svg",
-  traveliteInterior: "/images/places/travelite-interior.svg",
-  legardaExterior: "/images/places/legarda-exterior.svg",
-  legardaInterior: "/images/places/legarda-interior.svg",
-  roastery: "/images/places/roastery.svg",
-  coffeeCloseup: "/images/places/coffee-closeup.svg",
-  pastries: "/images/places/pastries.svg",
-  food: "/images/places/food.svg",
-  mood: "/images/places/baguio-mood.svg",
+  hero: "/images/places/hero.jpg",
+  signature: "/images/places/signature.jpg",
+  traveliteExterior: "/images/places/travelite-exterior.jpg",
+  traveliteInterior: "/images/places/travelite-interior.jpg",
+  legardaExterior: "/images/places/legarda-exterior.jpg",
+  legardaInterior: "/images/places/legarda-interior.jpg",
+  roastery: "/images/places/roastery.jpg",
+  coffeeCloseup: "/images/places/coffee-closeup.jpg",
+  pastries: "/images/places/pastries.jpg",
+  food: "/images/places/food.jpg",
+  mood: "/images/places/baguio-mood.jpg",
 };
 
 export const socialLinks = {

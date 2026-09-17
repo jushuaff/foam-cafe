@@ -87,7 +87,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-[1.6rem] bg-[#eddfd0]">
                   <Image
                     src={imageSlots.hero}
-                    alt="Foam Coffee interior and coffee expression"
+                    alt="Warm cafe interior with coffee and natural light"
                     width={900}
                     height={1100}
                     priority
@@ -121,7 +121,7 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-[2rem] border border-[#d7cec4] bg-[#e7d9ca]">
                 <Image
                   src={imageSlots.roastery}
-                  alt="Foam Coffee roastery and café atmosphere"
+                  alt="Cafe counter and seating in warm natural light"
                   width={700}
                   height={800}
                   className="h-full w-full object-cover"
@@ -184,7 +184,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-[#d7cec4] bg-[#ede0d2] p-3 shadow-[0_30px_90px_rgba(42,31,25,0.08)]">
               <Image
                 src={imageSlots.signature}
-                alt="The Foam Signature Latte"
+                alt="Foam-style signature latte with layered coffee and foam"
                 width={900}
                 height={1100}
                 className="h-[680px] w-full rounded-[1.5rem] object-cover"
@@ -219,7 +219,7 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-[2rem] border border-[#bfd1c5] bg-[#dfe9e3]">
                 <Image
                   src={imageSlots.mood}
-                  alt="Baguio city mood and café atmosphere"
+                  alt="Mountain city cafe atmosphere with cool green tones"
                   width={1200}
                   height={900}
                   className="h-full w-full object-cover"
