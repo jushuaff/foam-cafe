@@ -369,10 +369,10 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                      <button type="button" onClick={() => focusBranchMap(branch.id)} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
+                      <a href={branch.directionsUrl} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
                         Get Directions
                         <ArrowRight size={15} aria-hidden="true" />
-                      </button>
+                      </a>
                       <a href={`tel:${branch.tel.replace(/\s+/g, "")}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-[#201d1b]/10 bg-white/80 px-5 py-3 text-sm font-medium text-[#201d1b]">
                         Call
                       </a>

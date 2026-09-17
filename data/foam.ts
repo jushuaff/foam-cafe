@@ -35,7 +35,7 @@ export const branches = [
     address: "Upper Ground Floor,\nTravelite Hotel,\nShuntug Road,\nBaguio City, Benguet",
     tel: "0977 602 3750",
     mapUrl:
-      "https://www.google.com/maps?q=Upper+Ground+Floor+Travelite+Hotel+Shuntug+Road+Baguio+City+Benguet&output=embed",
+      "https://www.google.com/maps?q=Travelite+Hotel+Baguio+Shuntug+Road&output=embed",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=Upper+Ground+Floor+Travelite+Hotel+Shuntug+Road+Baguio+City+Benguet",
     shortAddress: "Upper Ground Floor, Travelite Hotel, Shuntug Road",
