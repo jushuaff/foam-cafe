@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import {
   ArrowRight,
   Calendar,
@@ -30,6 +33,8 @@ import {
 
 export default function HomePage() {
   const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
+  const [activeBranchId, setActiveBranchId] = useState(branches[0].id);
+  const activeBranch = branches.find((branch) => branch.id === activeBranchId) ?? branches[0];
 
   return (
     <div id="top" className="bg-[#f7f1ea] text-[#1e1a17]">
@@ -315,7 +320,13 @@ export default function HomePage() {
                 <button
                   key={branch.id}
                   type="button"
-                  className="rounded-full border border-[#201d1b]/10 bg-white/70 px-4 py-2 text-sm font-medium text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f5efe8]"
+                  className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                    activeBranchId === branch.id
+                      ? "border-[#1d1a18] bg-[#1d1a18] text-[#f7f1ea]"
+                      : "border-[#201d1b]/10 bg-white/70 text-[#201d1b] hover:bg-[#201d1b] hover:text-[#f5efe8]"
+                  }`}
+                  aria-pressed={activeBranchId === branch.id}
+                  onClick={() => setActiveBranchId(branch.id)}
                 >
                   {branch.label}
                 </button>
@@ -365,11 +376,11 @@ export default function HomePage() {
               </div>
 
               <div className="overflow-hidden rounded-[2rem] border border-[#d9c9b3] bg-[#efe6dc] p-3 shadow-[0_20px_60px_rgba(39,29,24,0.04)]">
-                <div className="overflow-hidden rounded-[1.6rem] border border-[#c0b2a4] bg-white/60">
+                <div className="relative aspect-[4/3] min-h-[360px] overflow-hidden rounded-[1.6rem] border border-[#c0b2a4] bg-white/60 lg:aspect-[5/6]">
                   <iframe
-                    title="Foam Coffee Travelite Map"
-                    src={branches[0].mapUrl}
-                    className="h-[620px] w-full border-0"
+                    title={`${activeBranch.name} map`}
+                    src={activeBranch.mapUrl}
+                    className="absolute inset-0 h-full w-full border-0"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   />
