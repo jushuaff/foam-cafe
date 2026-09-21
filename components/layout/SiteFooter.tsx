@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Camera, Globe, Mail, Phone } from "lucide-react";
 import { BrandLogo } from "@/components/brand/BrandLogo";
-import { businessInfo, navigationItems, branches } from "@/data/concept";
+import { businessInfo, navigationItems, branches, socialLinks } from "@/data/foam";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -35,7 +35,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm uppercase tracking-[0.22em] text-[#d7c0a1]">Sample Locations</h3>
+            <h3 className="text-sm uppercase tracking-[0.22em] text-[#d7c0a1]">Baguio Locations</h3>
             <ul className="mt-5 space-y-3 text-sm text-[#efe6de]">
               {branches.map((branch) => (
                 <li key={branch.id}>{branch.label}</li>
@@ -47,10 +47,10 @@ export function SiteFooter() {
             <h3 className="text-sm uppercase tracking-[0.22em] text-[#d7c0a1]">Contact</h3>
             <ul className="mt-5 space-y-3 text-sm text-[#efe6de]">
               <li>
-                <span className="inline-flex items-center gap-2 hover:text-white">
+                <a href={`mailto:${businessInfo.email}`} className="inline-flex items-center gap-2 hover:text-white">
                   <Mail size={15} aria-hidden="true" />
                   {businessInfo.email}
-                </span>
+                </a>
               </li>
               <li>
                 <span className="inline-flex items-center gap-2 hover:text-white">
@@ -58,13 +58,20 @@ export function SiteFooter() {
                   {businessInfo.phone} (sample)
                 </span>
               </li>
-<li className="pt-2 text-[#d7c0a1]">Social profile placeholder</li>
+              <li className="flex items-center gap-3 pt-2">
+                <a href={socialLinks.facebook} target="_blank" rel="noreferrer" aria-label="Sample Facebook link (placeholder)" className="rounded-full border border-white/15 p-2 text-[#f5efe8] transition-colors hover:bg-white/10">
+                  <Globe size={15} aria-hidden="true" />
+                </a>
+                <a href={socialLinks.instagram} target="_blank" rel="noreferrer" aria-label="Sample Instagram link (placeholder)" className="rounded-full border border-white/15 p-2 text-[#f5efe8] transition-colors hover:bg-white/10">
+                  <Camera size={15} aria-hidden="true" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-[#d9d0c7] md:flex-row md:items-center md:justify-between">
-          <p>Sample Coffee / Design study {currentYear}</p>
+          <p>© {currentYear} Sample Coffee.</p>
           <p>Fictional café concept. All business and contact details are samples.</p>
         </div>
       </div>
