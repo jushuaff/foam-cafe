@@ -32,7 +32,6 @@ import {
 } from "@/data/foam";
 
 export default function HomePage() {
-  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
   const [activeBranchId, setActiveBranchId] = useState(branches[1].id);
   const activeBranch = branches.find((branch) => branch.id === activeBranchId) ?? branches[0];
   const mapPanelRef = useRef<HTMLDivElement>(null);
@@ -44,7 +43,7 @@ export default function HomePage() {
 
   return (
     <div id="top" className="bg-[#f7f1ea] text-[#1e1a17]">
-      {isDemoMode ? <DemoBanner /> : null}
+      <DemoBanner />
       <SiteHeader />
 
       <main>
@@ -61,7 +60,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="max-w-xl font-display text-[clamp(3.6rem,8vw,8rem)] leading-[0.88] tracking-[-0.08em] text-[#1a1715]">
-                FOAM
+                SAMPLE
                 <span className="block text-[#3d362f]">COFFEE</span>
               </h1>
 
@@ -87,7 +86,7 @@ export default function HomePage() {
               <div className="mt-7 flex items-center gap-3 text-sm text-[#49413d]">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#1d1a18]/10 bg-[#faf5f0] px-3 py-1.5">
                   <Clock3 size={14} aria-hidden="true" />
-                  Open 24/7 at Travelite
+                  A café concept for every hour
                 </span>
               </div>
             </div>
@@ -116,14 +115,14 @@ export default function HomePage() {
         <section id="story" className="mx-auto max-w-7xl px-4 py-24 md:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Story"
-            title="Born in Baguio."
-            description="Foam Coffee began in 2021 and developed from a Baguio café into a growing coffee brand built around roasting, signature drinks, pastries and all-day meals."
+            title="Inspired by Baguio."
+            description="An imagined neighborhood café inspired by Baguio, bringing together specialty coffee, fresh pastries and all-day meals in a warm, welcoming space."
           />
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
               <div className="rounded-[2rem] border border-[#d7cec4] bg-[#f2e8df] p-6">
-                <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#72655c]">2021</p>
+                <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#72655c]">CONCEPT</p>
                 <div className="mt-4 font-display text-5xl leading-none tracking-[-0.08em] text-[#211d1b]">BAGUIO</div>
                 <div className="mt-2 font-display text-4xl leading-none tracking-[-0.08em] text-[#5f564f]">COFFEE</div>
                 <div className="mt-2 font-display text-4xl leading-none tracking-[-0.08em] text-[#b98e5d]">ROASTERY</div>
@@ -142,7 +141,7 @@ export default function HomePage() {
 
             <div className="space-y-5 text-base leading-8 text-[#4c4643]">
               <p>
-                From a local café rooted in Baguio to a growing coffee brand, Foam Coffee has grown through thoughtful drinks, warm hospitality and a strong sense of place.
+                Sample Coffee explores what a neighborhood café could feel like: thoughtful drinks, warm hospitality and a strong sense of place. It is a fictional brand created for this design study.
               </p>
               <p>
                 The identity sits between mountain cool and café warmth—coffee roasting, seasonal drinks and comforting food shaped for slow afternoons and meaningful conversations.
@@ -161,7 +160,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Menu"
               title="What we serve."
-              description="A curated snapshot of Foam Coffee favorites, with menu selections varying by branch."
+              description="An illustrative menu of café favorites, created for this design concept."
             />
 
             <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -182,8 +181,8 @@ export default function HomePage() {
 
             <div className="mt-10 flex items-center justify-between gap-4 border-t border-[#d9c9b3] pt-6 text-sm text-[#524b46]">
               <p>Menu selections may vary by branch.</p>
-              <Link href="https://www.facebook.com/foamcoffeeph" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-medium text-[#1e1a17] transition-colors hover:text-[#5d4334]">
-                See Latest Menu
+              <Link href="#contact" className="inline-flex items-center gap-2 font-medium text-[#1e1a17] transition-colors hover:text-[#5d4334]">
+                Sample Menu Inquiries
                 <ChevronRight size={16} aria-hidden="true" />
               </Link>
             </div>
@@ -195,7 +194,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-[#d7cec4] bg-[#ede0d2] p-3 shadow-[0_30px_90px_rgba(42,31,25,0.08)]">
               <Image
                 src={imageSlots.signature}
-                alt="Foam-style signature latte with layered coffee and foam"
+                alt="House-style signature latte with layered coffee and foam"
                 width={900}
                 height={1100}
                 className="h-[680px] w-full rounded-[1.5rem] object-cover"
@@ -205,11 +204,11 @@ export default function HomePage() {
             <div>
               <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#766a63]">Signature</p>
               <h2 className="mt-4 font-display text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-[-0.08em] text-[#1e1a17]">
-                THE FOAM
+                THE HOUSE
                 <span className="block text-[#644d3d]">SIGNATURE LATTE</span>
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-[#4a433f]">
-                Coffee beneath. Foam above. The signature that carries the name.
+                Rich espresso. Silky milk. A little everyday comfort.
               </p>
               <p className="mt-4 max-w-xl text-base leading-7 text-[#564d47]">
                 A warm, immersive café ritual shaped for Baguio mornings, conversations and the slow rhythm of a well-made cup.
@@ -223,7 +222,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Baguio Experience"
               title="Coffee weather, all year."
-              description="From early Baguio mornings to midnight conversations, there’s always time for Foam."
+              description="From early Baguio mornings to midnight conversations, there’s always time for coffee."
             />
 
             <div className="mt-10 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
@@ -252,7 +251,7 @@ export default function HomePage() {
                     <span className="text-xs uppercase tracking-[0.25em]">All-day café life</span>
                   </div>
                   <p className="mt-4 text-base leading-7 text-[#514b46]">
-                    Work sessions, late-night catch-ups and warm pastries all fit naturally inside Foam’s Baguio rhythm.
+                    Work sessions, late-night catch-ups and warm pastries all fit naturally inside the concept’s Baguio rhythm.
                   </p>
                 </div>
                 <div className="rounded-[2rem] border border-[#bfd1c5] bg-[#f7f4f1] p-7">
@@ -317,8 +316,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Locations"
-              title="Find Your Foam."
-              description="Two Baguio coffee spaces shaped for different rhythms of the day."
+              title="Find Your Coffee Spot."
+              description="Two fictional café locations. Addresses and opening hours are samples for this concept."
             />
 
             <div className="mt-10 flex flex-wrap gap-3">
@@ -364,18 +363,15 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-start gap-3">
                         <Phone size={18} className="mt-1 text-[#74583d]" aria-hidden="true" />
-                        <a href={`tel:${branch.tel.replace(/\s+/g, "")}`} className="hover:text-[#2f2a27]">{branch.tel}</a>
+                        <span>{branch.tel} (sample)</span>
                       </div>
                     </div>
 
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                       <button type="button" onClick={() => focusBranchMap(branch.id)} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-5 py-3 text-sm font-medium text-[#f7f1ea]">
-                        Get Directions
+                        Preview Location
                         <ArrowRight size={15} aria-hidden="true" />
                       </button>
-                      <a href={`tel:${branch.tel.replace(/\s+/g, "")}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-[#201d1b]/10 bg-white/80 px-5 py-3 text-sm font-medium text-[#201d1b]">
-                        Call
-                      </a>
                     </div>
                   </article>
                 ))}
@@ -383,14 +379,12 @@ export default function HomePage() {
 
               <div ref={mapPanelRef} className="scroll-mt-28 overflow-hidden rounded-[2rem] border border-[#d9c9b3] bg-[#efe6dc] p-3 shadow-[0_20px_60px_rgba(39,29,24,0.04)]">
                 <div className="relative aspect-[4/3] min-h-[360px] overflow-hidden rounded-[1.6rem] border border-[#c0b2a4] bg-white/60 lg:aspect-[5/6]">
-                  <iframe
-                    key={activeBranch.id}
-                    title={`${activeBranch.name} map`}
-                    src={activeBranch.mapUrl}
-                    className="absolute inset-0 h-full w-full border-0"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8 text-center text-[#74583d]">
+                    <MapPin size={40} aria-hidden="true" />
+                    <p className="font-display text-3xl">{activeBranch.label}</p>
+                    <p className="whitespace-pre-line">{activeBranch.address}</p>
+                    <p className="max-w-xs text-sm">Location preview only. This fictional café has no physical address or directions.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -412,7 +406,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone size={18} className="mt-1 text-[#6e5e4d]" aria-hidden="true" />
-                  <a href={`tel:${businessInfo.phone.replace(/\s+/g, "")}`} className="hover:text-[#2d2826]">{businessInfo.phone}</a>
+                  <span>{businessInfo.phone} (sample)</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin size={18} className="mt-1 text-[#6e5e4d]" aria-hidden="true" />
@@ -421,11 +415,11 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8 flex items-center gap-3">
-                <a href={socialLinks.facebook} target="_blank" rel="noreferrer" aria-label="Visit Foam Coffee on Facebook" className="flex h-12 w-12 items-center justify-center rounded-full border border-[#201d1b]/10 bg-[#f9f4ef] text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f9f4ef]">
+                <a href={socialLinks.facebook} target="_blank" rel="noreferrer" aria-label="Sample Facebook link (placeholder)" className="flex h-12 w-12 items-center justify-center rounded-full border border-[#201d1b]/10 bg-[#f9f4ef] text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f9f4ef]">
                   <span className="sr-only">Facebook</span>
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V7.4c0-.9.3-1.5 1.6-1.5H17V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.3v8h3.2Z"/></svg>
                 </a>
-                <a href={socialLinks.instagram} target="_blank" rel="noreferrer" aria-label="Visit Foam Coffee on Instagram" className="flex h-12 w-12 items-center justify-center rounded-full border border-[#201d1b]/10 bg-[#f9f4ef] text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f9f4ef]">
+                <a href={socialLinks.instagram} target="_blank" rel="noreferrer" aria-label="Sample Instagram link (placeholder)" className="flex h-12 w-12 items-center justify-center rounded-full border border-[#201d1b]/10 bg-[#f9f4ef] text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f9f4ef]">
                   <span className="sr-only">Instagram</span>
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0 3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm5.3-3.3a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2Z"/></svg>
                 </a>
@@ -477,8 +471,8 @@ export default function HomePage() {
                     <label htmlFor="preferredBranch" className="mb-2 block text-sm font-medium text-[#312d2b]">Preferred Branch</label>
                     <select id="preferredBranch" name="preferredBranch" className="w-full rounded-2xl border border-[#d7cbbd] bg-white px-4 py-3 text-base text-[#1e1a17] outline-none ring-0 transition-colors focus:border-[#5e4a39]">
                       <option value="">Select</option>
-                      <option value="Travelite / Shuntug">Travelite / Shuntug</option>
-                      <option value="Legarda / Bukaneg">Legarda / Bukaneg</option>
+                      <option value="Downtown / Sample Branch">Downtown / Sample Branch</option>
+                      <option value="Hillside / Sample Roastery">Hillside / Sample Roastery</option>
                       <option value="No preference">No preference</option>
                     </select>
                   </div>
@@ -503,9 +497,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm text-[#564d47]">Your request has been sent. The Foam Coffee team will need to confirm availability.</p>
-                  <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-6 py-3.5 text-sm font-medium text-[#f7f1ea] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70">
-                    Send Inquiry
+                  <p className="text-sm text-[#564d47]">Concept preview only. This form does not send messages or make reservations.</p>
+                  <button type="submit" disabled className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d1a18] px-6 py-3.5 text-sm font-medium text-[#f7f1ea] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70">
+                    Sample Inquiry
                   </button>
                 </div>
               </form>
@@ -518,10 +512,10 @@ export default function HomePage() {
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-[0.7rem] uppercase tracking-[0.24em] text-[#d7c0a1]">Social</p>
-                <h2 className="mt-3 font-display text-[clamp(2.5rem,5vw,5rem)] leading-[0.9] tracking-[-0.07em] text-white">From Baguio, with Foam.</h2>
+                <h2 className="mt-3 font-display text-[clamp(2.5rem,5vw,5rem)] leading-[0.9] tracking-[-0.07em] text-white">From Baguio, with coffee.</h2>
               </div>
               <a href={socialLinks.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#f5efe8] transition-colors hover:text-[#d7c0a1]">
-                Follow @foamcoffeeph
+                Sample social profile
                 <ArrowRight size={15} aria-hidden="true" />
               </a>
             </div>

@@ -1,19 +1,17 @@
-// IMPORTANT:
-// Business information should be verified with Foam Coffee
-// before production deployment.
+// Fictional content for a design concept. Contact details and locations are samples.
 
 export const businessInfo = {
-  name: "Foam Coffee",
+  name: "Sample Coffee",
   city: "Baguio City, Philippines",
-  email: "foamcoffeeph@gmail.com",
-  phone: "0977 602 3750",
-  facebook: "@foamcoffeeph",
-  instagram: "@foamcoffeeph",
-  instagramUrl: "https://www.instagram.com/foamcoffeeph/",
-  facebookUrl: "https://www.facebook.com/foamcoffeeph",
-  summary: "Crafting coffee with expertise.",
+  email: "hello@example.com",
+  phone: "0000 000 0000",
+  facebook: "@samplecoffee",
+  instagram: "@samplecoffee",
+  instagramUrl: "https://example.com/instagram",
+  facebookUrl: "https://example.com/facebook",
+  summary: "An independent café design concept.",
   description:
-    "Discover Foam Coffee in Baguio City. Explore signature coffee, pastries and all-day meals, and find the Travelite and Legarda branches.",
+    "Sample Coffee is a fictional café website concept inspired by Baguio. All contact details, locations and offerings are illustrative.",
 };
 
 export const navigationItems = [
@@ -27,39 +25,33 @@ export const navigationItems = [
 
 export const branches = [
   {
-    id: "travelite",
-    name: "Foam Coffee – Travelite",
-    label: "Travelite / Shuntug",
+    id: "downtown",
+    name: "Sample Coffee – Downtown",
+    label: "Downtown / Sample Branch",
     highlight: "24/7",
     hours: "OPEN 24 HOURS\nDaily",
-    address: "Upper Ground Floor,\nTravelite Hotel,\nShuntug Road,\nBaguio City, Benguet",
-    tel: "0977 602 3750",
-    mapUrl:
-      "https://www.google.com/maps?q=Travelite+Hotel+Baguio+Shuntug+Road&output=embed",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Upper+Ground+Floor+Travelite+Hotel+Shuntug+Road+Baguio+City+Benguet",
-    shortAddress: "Upper Ground Floor, Travelite Hotel, Shuntug Road",
+    address: "123 Sample Street,\nBaguio City (illustrative address)",
+    tel: "0000 000 0000",
+
+    shortAddress: "123 Sample Street (illustrative)",
   },
   {
-    id: "legarda",
-    name: "Foam Coffee + Roastery – Legarda",
-    label: "Legarda / Bukaneg",
+    id: "hillside",
+    name: "Sample Coffee + Roastery – Hillside",
+    label: "Hillside / Sample Roastery",
     highlight: "Coffee + Roastery",
     hours: "7:00 AM – 1:00 AM\nDaily",
-    address: "15 Bukaneg Street,\nBaguio City, Benguet",
-    tel: "0977 602 3750",
-    mapUrl:
-      "https://www.google.com/maps?q=15+Bukaneg+Street+Baguio+City+Benguet&output=embed",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=15+Bukaneg+Street+Baguio+City+Benguet",
-    shortAddress: "15 Bukaneg Street, Baguio City",
+    address: "456 Example Avenue,\nBaguio City (illustrative address)",
+    tel: "0000 000 0000",
+
+    shortAddress: "456 Example Avenue (illustrative)",
   },
 ];
 
 export const menuHighlights = [
   {
     category: "SIGNATURE COFFEE",
-    items: ["Foam Signature Latte", "Speculoos Latte", "Tiramisu Latte", "Sakura Latte"],
+    items: ["House Signature Latte", "Speculoos Latte", "Tiramisu Latte", "Sakura Latte"],
   },
   {
     category: "MATCHA & NON-COFFEE",
@@ -130,16 +122,16 @@ export const imageSlots = {
 };
 
 export const socialLinks = {
-  facebook: "https://www.facebook.com/foamcoffeeph",
-  instagram: "https://www.instagram.com/foamcoffeeph/",
+  facebook: "https://example.com/facebook",
+  instagram: "https://example.com/instagram",
 };
 
 export const seoKeywords = [
-  "Foam Coffee Baguio",
+  "Sample Coffee Baguio",
   "Baguio cafe",
   "coffee shop Baguio",
   "24 hour cafe Baguio",
   "specialty coffee Baguio",
-  "Legarda cafe",
+  "cafe design concept",
   "Baguio coffee shop",
 ];

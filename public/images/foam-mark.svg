@@ -1,9 +1,5 @@
-<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Foam Coffee mark</title>
-  <desc id="desc">Blue cloud mascot with a coffee bean</desc>
-  <path d="M28 113C8 113 0 96 9 82c4-7 11-12 20-13C32 49 50 35 70 35c13 0 25 6 33 16 5-5 13-8 21-8 16 0 29 12 30 28 15 3 26 16 26 31 0 17-14 31-31 31H28Z" fill="#4b89cc" stroke="#202124" stroke-width="4"/>
-  <path d="M99 76c-1-24 15-39 42-42 5 20-4 38-27 48-6 3-11 2-15-6Z" fill="#202124"/>
-  <path d="M110 78c8-13 17-24 29-34" fill="none" stroke="#f7f7f7" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="58" cy="95" r="5" fill="#202124"/><circle cx="88" cy="95" r="5" fill="#202124"/>
-  <path d="M66 106c5 6 11 6 16 0" fill="none" stroke="#202124" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Sample Coffee concept</title>
+  <rect width="160" height="160" rx="32" fill="#f7f1ea"/>
+  <text x="80" y="106" text-anchor="middle" font-family="Georgia, serif" font-size="78" fill="#1e1a17">sc</text>
 </svg>
