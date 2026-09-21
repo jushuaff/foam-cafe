@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { businessInfo } from "@/data/foam";
+import { businessInfo } from "@/data/concept";
 
 type BrandLogoProps = {
   inverted?: boolean;

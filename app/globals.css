@@ -3,7 +3,9 @@
 :root {
   --background: #f7f1ea;
   --foreground: #1f1c1a;
-  --font-display: var(--font-display);
+  --font-geist-sans: Arial, Helvetica, sans-serif;
+  --font-geist-mono: "Courier New", monospace;
+  --font-display: Georgia, "Times New Roman", serif;
 }
 
 @theme inline {

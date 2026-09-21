@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Menu, X, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand/BrandLogo";
-import { navigationItems } from "@/data/foam";
+import { navigationItems } from "@/data/concept";
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);

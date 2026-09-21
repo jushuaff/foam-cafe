@@ -2,16 +2,12 @@
 
 export const businessInfo = {
   name: "Sample Coffee",
-  city: "Baguio City, Philippines",
+  city: "Sample City (fictional)",
   email: "hello@example.com",
   phone: "0000 000 0000",
-  facebook: "@samplecoffee",
-  instagram: "@samplecoffee",
-  instagramUrl: "https://example.com/instagram",
-  facebookUrl: "https://example.com/facebook",
   summary: "An independent café design concept.",
   description:
-    "Sample Coffee is a fictional café website concept inspired by Baguio. All contact details, locations and offerings are illustrative.",
+    "Sample Coffee is a fictional café website concept for an imagined neighborhood. All contact details, locations and offerings are illustrative.",
 };
 
 export const navigationItems = [
@@ -30,7 +26,7 @@ export const branches = [
     label: "Downtown / Sample Branch",
     highlight: "24/7",
     hours: "OPEN 24 HOURS\nDaily",
-    address: "123 Sample Street,\nBaguio City (illustrative address)",
+    address: "123 Sample Street,\nSample City (fictional address)",
     tel: "0000 000 0000",
 
     shortAddress: "123 Sample Street (illustrative)",
@@ -41,7 +37,7 @@ export const branches = [
     label: "Hillside / Sample Roastery",
     highlight: "Coffee + Roastery",
     hours: "7:00 AM – 1:00 AM\nDaily",
-    address: "456 Example Avenue,\nBaguio City (illustrative address)",
+    address: "456 Example Avenue,\nSample City (fictional address)",
     tel: "0000 000 0000",
 
     shortAddress: "456 Example Avenue (illustrative)",
@@ -67,7 +63,7 @@ export const menuHighlights = [
   },
   {
     category: "PASTA & SAVORY",
-    items: ["Bulgogi Pasta", "Doritos Chicken", "Savory comfort bowls", "Coffeehouse favorites"],
+    items: ["Bulgogi Pasta", "Crispy Chicken", "Savory comfort bowls", "Coffeehouse favorites"],
   },
   {
     category: "DESSERTS",
@@ -92,46 +88,19 @@ export const experiences = [
       "A simple way to plan a coffee catch-up, study session, or casual meeting before you arrive.",
   },
   {
-    title: "Franchise Consultation",
+    title: "Group Gatherings",
     description:
-      "For brand-minded conversations around café concepts, coffee culture and operational direction.",
+      "An illustrative space for shared tables, casual meetups and coffee conversations.",
   },
 ];
 
 export const socialGallery = [
-  { id: "foam-01", alt: "Coffee in a warm cafe setting", src: "/images/places/coffee-closeup.jpg" },
-  { id: "foam-02", alt: "Cafe interior with tables and natural light", src: "/images/places/travelite-interior.jpg" },
-  { id: "foam-03", alt: "Fresh pastry selection", src: "/images/places/pastries.jpg" },
-  { id: "foam-04", alt: "Coffee shop exterior atmosphere", src: "/images/places/travelite-exterior.jpg" },
-  { id: "foam-05", alt: "Prepared cafe food", src: "/images/places/food.jpg" },
-  { id: "foam-06", alt: "Coffee and cafe atmosphere", src: "/images/places/roastery.jpg" },
+  { id: "coffee", title: "First cup.", caption: "A small pause before the day begins." },
+  { id: "space", title: "Room to settle in.", caption: "An imagined corner for reading and conversation." },
+  { id: "pastry", title: "Something sweet.", caption: "Fresh-bake ideas from an illustrative menu." },
+  { id: "welcome", title: "Come as you are.", caption: "A welcoming mood for a fictional café." },
+  { id: "table", title: "Around the table.", caption: "Simple food and shared moments." },
+  { id: "ritual", title: "Make a little time.", caption: "An everyday coffee ritual, imagined." },
 ];
 
-export const imageSlots = {
-  hero: "/images/places/hero.jpg",
-  signature: "/images/places/signature.jpg",
-  traveliteExterior: "/images/places/travelite-exterior.jpg",
-  traveliteInterior: "/images/places/travelite-interior.jpg",
-  legardaExterior: "/images/places/legarda-exterior.jpg",
-  legardaInterior: "/images/places/legarda-interior.jpg",
-  roastery: "/images/places/roastery.jpg",
-  coffeeCloseup: "/images/places/coffee-closeup.jpg",
-  pastries: "/images/places/pastries.jpg",
-  food: "/images/places/food.jpg",
-  mood: "/images/places/baguio-mood.jpg",
-};
-
-export const socialLinks = {
-  facebook: "https://example.com/facebook",
-  instagram: "https://example.com/instagram",
-};
-
-export const seoKeywords = [
-  "Sample Coffee Baguio",
-  "Baguio cafe",
-  "coffee shop Baguio",
-  "24 hour cafe Baguio",
-  "specialty coffee Baguio",
-  "cafe design concept",
-  "Baguio coffee shop",
-];
+export const seoKeywords = ["fictional cafe", "cafe design concept", "sample coffee website"];

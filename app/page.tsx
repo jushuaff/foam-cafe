@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { ConceptPanel } from "@/components/ui/ConceptPanel";
 import { useRef, useState } from "react";
 import {
   ArrowRight,
@@ -25,11 +25,9 @@ import {
   branches,
   businessInfo,
   experiences,
-  imageSlots,
   menuHighlights,
   socialGallery,
-  socialLinks,
-} from "@/data/foam";
+} from "@/data/concept";
 
 export default function HomePage() {
   const [activeBranchId, setActiveBranchId] = useState(branches[1].id);
@@ -56,7 +54,7 @@ export default function HomePage() {
             <div className="relative z-10" style={{ animation: "fadeUp 0.7s ease-out forwards" }}>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#221f1e]/10 bg-[#faf5f0]/80 px-3 py-1.5 text-[0.68rem] uppercase tracking-[0.25em] text-[#4f4945]">
                 <Sparkles size={12} className="text-[#b37739]" aria-hidden="true" />
-                Baguio coffee culture
+                An imagined café
               </div>
 
               <h1 className="max-w-xl font-display text-[clamp(3.6rem,8vw,8rem)] leading-[0.88] tracking-[-0.08em] text-[#1a1715]">
@@ -66,7 +64,7 @@ export default function HomePage() {
 
               <div className="mt-6 max-w-xl space-y-4 text-[1.05rem] leading-8 text-[#514b46]">
                 <p className="font-display text-[clamp(1.8rem,3vw,3rem)] uppercase tracking-[-0.05em] leading-[0.95] text-[#2e2a27]">
-                  Crafted in the cool of Baguio.
+                  A little warmth in every cup.
                 </p>
                 <p>
                   Specialty coffee, signature drinks, freshly baked treats and comforting meals made for slow mornings, late-night conversations and everything in between.
@@ -79,7 +77,7 @@ export default function HomePage() {
                   <ArrowRight size={16} aria-hidden="true" />
                 </Link>
                 <Link href="#locations" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1d1a18]/15 bg-white/60 px-6 py-3.5 text-sm font-medium text-[#1d1a18] transition-transform hover:-translate-y-0.5">
-                  Find a Baguio Branch
+                  Explore Sample Locations
                 </Link>
               </div>
 
@@ -95,17 +93,10 @@ export default function HomePage() {
               <div className="relative overflow-hidden rounded-[2rem] border border-[#201d1b]/10 bg-[#efe5db] p-4 shadow-[0_30px_90px_rgba(21,16,14,0.08)]">
                 <div className="absolute inset-x-10 top-8 h-24 rounded-full bg-[#f6efe8]/80 blur-2xl" aria-hidden="true" />
                 <div className="relative overflow-hidden rounded-[1.6rem] bg-[#eddfd0]">
-                  <Image
-                    src={imageSlots.hero}
-                    alt="Warm cafe interior with coffee and natural light"
-                    width={900}
-                    height={1100}
-                    priority
-                    className="h-[650px] w-full object-cover"
-                  />
+                  <ConceptPanel title="A slower kind of coffee." caption="An imagined space for good coffee and easy conversation." className="h-[650px] w-full" />
                 </div>
                 <div className="absolute left-8 top-8 rounded-full border border-[#1d1a18]/10 bg-[#f9f4ee]/90 px-4 py-2 text-[0.68rem] uppercase tracking-[0.25em] text-[#413a36]">
-                  BAGUIO 15°C
+                  CAFÉ DESIGN STUDY
                 </div>
               </div>
             </div>
@@ -115,27 +106,21 @@ export default function HomePage() {
         <section id="story" className="mx-auto max-w-7xl px-4 py-24 md:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Story"
-            title="Inspired by Baguio."
-            description="An imagined neighborhood café inspired by Baguio, bringing together specialty coffee, fresh pastries and all-day meals in a warm, welcoming space."
+            title="An imagined neighborhood café."
+            description="A fictional gathering place bringing together specialty coffee, fresh pastries and all-day meals in a warm, welcoming space."
           />
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
               <div className="rounded-[2rem] border border-[#d7cec4] bg-[#f2e8df] p-6">
                 <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#72655c]">CONCEPT</p>
-                <div className="mt-4 font-display text-5xl leading-none tracking-[-0.08em] text-[#211d1b]">BAGUIO</div>
+                <div className="mt-4 font-display text-5xl leading-none tracking-[-0.08em] text-[#211d1b]">SAMPLE</div>
                 <div className="mt-2 font-display text-4xl leading-none tracking-[-0.08em] text-[#5f564f]">COFFEE</div>
                 <div className="mt-2 font-display text-4xl leading-none tracking-[-0.08em] text-[#b98e5d]">ROASTERY</div>
               </div>
 
               <div className="overflow-hidden rounded-[2rem] border border-[#d7cec4] bg-[#e7d9ca]">
-                <Image
-                  src={imageSlots.roastery}
-                  alt="Cafe counter and seating in warm natural light"
-                  width={700}
-                  height={800}
-                  className="h-full w-full object-cover"
-                />
+                <ConceptPanel title="Made for everyday moments." caption="A fictional neighborhood café, expressed through type and color." className="h-full w-full" />
               </div>
             </div>
 
@@ -180,7 +165,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10 flex items-center justify-between gap-4 border-t border-[#d9c9b3] pt-6 text-sm text-[#524b46]">
-              <p>Menu selections may vary by branch.</p>
+              <p>Sample menu for illustration only.</p>
               <Link href="#contact" className="inline-flex items-center gap-2 font-medium text-[#1e1a17] transition-colors hover:text-[#5d4334]">
                 Sample Menu Inquiries
                 <ChevronRight size={16} aria-hidden="true" />
@@ -192,13 +177,7 @@ export default function HomePage() {
         <section className="mx-auto max-w-7xl px-4 py-24 md:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="overflow-hidden rounded-[2rem] border border-[#d7cec4] bg-[#ede0d2] p-3 shadow-[0_30px_90px_rgba(42,31,25,0.08)]">
-              <Image
-                src={imageSlots.signature}
-                alt="House-style signature latte with layered coffee and foam"
-                width={900}
-                height={1100}
-                className="h-[680px] w-full rounded-[1.5rem] object-cover"
-              />
+              <ConceptPanel title="Espresso. Milk. A little pause." caption="An illustrative house latte from our sample menu." className="h-[680px] w-full rounded-[1.5rem]" />
             </div>
 
             <div>
@@ -211,7 +190,7 @@ export default function HomePage() {
                 Rich espresso. Silky milk. A little everyday comfort.
               </p>
               <p className="mt-4 max-w-xl text-base leading-7 text-[#564d47]">
-                A warm, immersive café ritual shaped for Baguio mornings, conversations and the slow rhythm of a well-made cup.
+                A café ritual imagined for quiet mornings, conversations and the slow rhythm of a well-made cup.
               </p>
             </div>
           </div>
@@ -220,20 +199,14 @@ export default function HomePage() {
         <section className="bg-[#e5eee8] py-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <SectionHeading
-              eyebrow="Baguio Experience"
+              eyebrow="The café experience"
               title="Coffee weather, all year."
-              description="From early Baguio mornings to midnight conversations, there’s always time for coffee."
+              description="From early mornings to midnight conversations, there’s always time for coffee."
             />
 
             <div className="mt-10 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
               <div className="overflow-hidden rounded-[2rem] border border-[#bfd1c5] bg-[#dfe9e3]">
-                <Image
-                  src={imageSlots.mood}
-                  alt="Mountain city cafe atmosphere with cool green tones"
-                  width={1200}
-                  height={900}
-                  className="h-full w-full object-cover"
-                />
+                <ConceptPanel title="Stay a little longer." caption="Warm tones, quiet corners and an unhurried pace." className="h-full w-full" />
               </div>
               <div className="grid gap-5">
                 <div className="rounded-[2rem] border border-[#bfd1c5] bg-[#f7f4f1] p-7">
@@ -251,7 +224,7 @@ export default function HomePage() {
                     <span className="text-xs uppercase tracking-[0.25em]">All-day café life</span>
                   </div>
                   <p className="mt-4 text-base leading-7 text-[#514b46]">
-                    Work sessions, late-night catch-ups and warm pastries all fit naturally inside the concept’s Baguio rhythm.
+                    Work sessions, late-night catch-ups and warm pastries all find a place in this imagined café.
                   </p>
                 </div>
                 <div className="rounded-[2rem] border border-[#bfd1c5] bg-[#f7f4f1] p-7">
@@ -272,7 +245,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Experiences & services"
             title="More than a coffee run."
-            description="Thoughtful experiences that match the pace of Baguio café culture."
+            description="Thoughtful experiences that match the pace of the neighborhood café culture."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -282,7 +255,7 @@ export default function HomePage() {
                   {experience.title === "Coffee Tasting" ? <Coffee size={18} aria-hidden="true" /> : null}
                   {experience.title === "Barista Workshop" ? <Sparkles size={18} aria-hidden="true" /> : null}
                   {experience.title === "Reservations" ? <Calendar size={18} aria-hidden="true" /> : null}
-                  {experience.title === "Franchise Consultation" ? <Utensils size={18} aria-hidden="true" /> : null}
+                  {experience.title === "Group Gatherings" ? <Utensils size={18} aria-hidden="true" /> : null}
                 </div>
                 <h3 className="text-2xl font-display tracking-[-0.05em] text-[#1e1a17]">{experience.title}</h3>
                 <p className="mt-4 text-base leading-7 text-[#514b46]">{experience.description}</p>
@@ -402,7 +375,7 @@ export default function HomePage() {
               <div className="mt-8 space-y-6 text-base text-[#524b46]">
                 <div className="flex items-start gap-3">
                   <Mail size={18} className="mt-1 text-[#6e5e4d]" aria-hidden="true" />
-                  <a href={`mailto:${businessInfo.email}`} className="hover:text-[#2d2826]">{businessInfo.email}</a>
+                  <span>{businessInfo.email} (sample)</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone size={18} className="mt-1 text-[#6e5e4d]" aria-hidden="true" />
@@ -414,27 +387,19 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="mt-8 flex items-center gap-3">
-                <a href={socialLinks.facebook} target="_blank" rel="noreferrer" aria-label="Sample Facebook link (placeholder)" className="flex h-12 w-12 items-center justify-center rounded-full border border-[#201d1b]/10 bg-[#f9f4ef] text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f9f4ef]">
-                  <span className="sr-only">Facebook</span>
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V7.4c0-.9.3-1.5 1.6-1.5H17V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.3v8h3.2Z"/></svg>
-                </a>
-                <a href={socialLinks.instagram} target="_blank" rel="noreferrer" aria-label="Sample Instagram link (placeholder)" className="flex h-12 w-12 items-center justify-center rounded-full border border-[#201d1b]/10 bg-[#f9f4ef] text-[#201d1b] transition-colors hover:bg-[#201d1b] hover:text-[#f9f4ef]">
-                  <span className="sr-only">Instagram</span>
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0 3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm5.3-3.3a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2Z"/></svg>
-                </a>
-              </div>
+              <p className="mt-8 text-sm text-[#655548]">Social profile placeholder — no account connected.</p>
             </div>
 
             <div className="rounded-[2.2rem] border border-[#d8c7b1] bg-[#faf6f1] p-5 shadow-[0_28px_90px_rgba(38,29,25,0.06)] md:p-8">
               <div className="flex items-center justify-between gap-4 pb-4">
                 <div>
                   <p className="text-[0.7rem] uppercase tracking-[0.22em] text-[#72655c]">Inquiry</p>
-                  <h3 className="mt-2 font-display text-3xl tracking-[-0.06em] text-[#1d1a18]">Send a message</h3>
+                  <h3 className="mt-2 font-display text-3xl tracking-[-0.06em] text-[#1d1a18]">Sample inquiry</h3>
                 </div>
               </div>
 
-              <form action="/api/contact" method="post" className="mt-6 space-y-5" noValidate>
+              <fieldset disabled className="mt-6 space-y-5">
+                <legend className="text-sm text-[#655548]">Sample form — no personal information is collected.</legend>
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <label htmlFor="fullName" className="mb-2 block text-sm font-medium text-[#312d2b]">Full Name *</label>
@@ -459,7 +424,7 @@ export default function HomePage() {
                       <option value="Group / Special Inquiry">Group / Special Inquiry</option>
                       <option value="Coffee Tasting">Coffee Tasting</option>
                       <option value="Barista Workshop">Barista Workshop</option>
-                      <option value="Franchise Inquiry">Franchise Inquiry</option>
+                      <option value="Group Gathering">Group Gathering</option>
                       <option value="Feedback">Feedback</option>
                       <option value="Other">Other</option>
                     </select>
@@ -502,7 +467,7 @@ export default function HomePage() {
                     Sample Inquiry
                   </button>
                 </div>
-              </form>
+              </fieldset>
             </div>
           </div>
         </section>
@@ -511,26 +476,17 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="text-[0.7rem] uppercase tracking-[0.24em] text-[#d7c0a1]">Social</p>
-                <h2 className="mt-3 font-display text-[clamp(2.5rem,5vw,5rem)] leading-[0.9] tracking-[-0.07em] text-white">From Baguio, with coffee.</h2>
+                <p className="text-[0.7rem] uppercase tracking-[0.24em] text-[#d7c0a1]">Concept notes</p>
+                <h2 className="mt-3 font-display text-[clamp(2.5rem,5vw,5rem)] leading-[0.9] tracking-[-0.07em] text-white">Small moments, good coffee.</h2>
               </div>
-              <a href={socialLinks.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#f5efe8] transition-colors hover:text-[#d7c0a1]">
-                Sample social profile
-                <ArrowRight size={15} aria-hidden="true" />
-              </a>
+              <p className="text-sm text-[#d7c0a1]">Illustrative content / No social account</p>
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {socialGallery.map((item, index) => (
                 <div key={item.id} className={`overflow-hidden rounded-[2rem] border border-white/10 ${index % 2 === 0 ? "lg:translate-y-8" : ""}`}>
                   <div className="relative h-72 bg-[#d9d2ca]">
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      width={600}
-                      height={600}
-                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
+                    <ConceptPanel title={item.title} caption={item.caption} className="h-full w-full" />
                   </div>
                 </div>
               ))}

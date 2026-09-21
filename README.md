@@ -1,19 +1,15 @@
-﻿# Sample Coffee Design Concept
+# Sample Coffee Design Concept
 
-A fictional cafe website inspired by Baguio, built with Next.js App Router, TypeScript and Tailwind CSS.
+A fictional cafe website using generic text, system fonts and CSS typography panels. No business photos, social-platform logos or real contact details are included in the current site.
 
 ## Development
 
-Run `npm install` and `npm run dev`, then open http://localhost:3000. Run `npm run lint` to lint the project and `npm run build` for a production build.
+Run `npm install` and `npm run dev`, then open http://localhost:3000. Use `npm run lint`, `npx tsc --noEmit` and `npm run build` to verify changes.
 
-## Concept content
+## Content
 
-The site uses a text wordmark, sample email addresses, placeholder social links and fictional branch information. The concept banner is always visible and search indexing is disabled. It is not affiliated with a real cafe.
+Edit `data/concept.ts` for sample business information, menu items and concept notes. All addresses, hours and offerings are illustrative. Contact information is plain placeholder text. The inquiry preview is disabled; the API returns a demo response without collecting or sending messages. No environment variables are required.
 
-Edit `data/foam.ts` to change the sample business details, branches, menu and image references. The existing filename is retained for import compatibility.
+The concept notice is always visible and search indexing is disabled. Typography panels are implemented in `components/ui/ConceptPanel.tsx`.
 
-The inquiry form is disabled. `/api/contact` returns a demo response and never sends email, even if previous email environment variables remain configured. No environment variables are required for this preview.
-
-## Photos
-
-The JPGs in `public/images/places/` are existing editorial cafe photographs, not verified photographs of the fictional locations. Replace them with approved images by updating the paths in `data/foam.ts`.
+This cleanup covers current repository files; it does not remove material from Git history or previously published deployments. Third-party software and its license notices remain intact.
